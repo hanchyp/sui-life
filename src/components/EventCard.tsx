@@ -167,20 +167,19 @@ export const EventCard: React.FC<EventCardProps> = ({
         <div className="absolute top-3 left-3 flex gap-2">
           {getStatusBadge()}
         </div>
-
-        <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
-          <div>
-            <h3 className="text-xl font-bold text-slate-800 tracking-tight">
-              {event.name}
-            </h3>
-            <p className="text-xs text-slate-400 font-mono mt-1">
-              By {event.creator.slice(0, 6)}...{event.creator.slice(-4)}
-            </p>
-          </div>
-        </div>
       </div>
 
       <div className="p-5 flex flex-col flex-1 space-y-4">
+        {/* Title and Creator */}
+        <div>
+          <h3 className="text-xl font-bold text-slate-800 tracking-tight leading-tight mb-1">
+            {event.name}
+          </h3>
+          <p className="text-xs text-slate-400 font-mono">
+            By {event.creator.slice(0, 6)}...{event.creator.slice(-4)}
+          </p>
+        </div>
+
         {/* Reward */}
         <div className="flex justify-between items-center bg-slate-50 p-3 rounded-lg border border-slate-200">
           <span className="text-xs font-bold text-slate-500 uppercase">
